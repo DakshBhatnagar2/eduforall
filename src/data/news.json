@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "New Education Center Opens",
+      "content": "We are excited to announce the opening of our new education center in downtown. This facility will serve over 500 students annually.",
+      "date": "2024-03-15",
+      "image": "/images/news/center-opening.jpg",
+      "published": true
+    },
+    {
+      "id": 2,
+      "title": "Volunteer Program Success",
+      "content": "Our volunteer program has reached a new milestone with over 1000 active volunteers helping to educate children across the country.",
+      "date": "2024-03-10",
+      "image": "/images/news/volunteers.jpg",
+      "published": true
+    }
+  ]
+} 
