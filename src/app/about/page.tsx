@@ -168,7 +168,7 @@ export default function AboutUs() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Impact</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Through our programs and initiatives, we've made a significant difference in the lives of children 
+              Through our programs and initiatives, we&apos;ve made a significant difference in the lives of children 
               and their communities. Our comprehensive approach to education has created lasting positive change 
               in countless lives, building stronger communities and brighter futures.
             </p>
@@ -297,7 +297,7 @@ export default function AboutUs() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Leadership Team</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the passionate individuals who are dedicated to making a difference in children's lives. Our team brings 
+              Meet the passionate individuals who are dedicated to making a difference in children&apos;s lives. Our team brings 
               together diverse expertise and experience to create innovative solutions for educational challenges.
             </p>
           </motion.div>

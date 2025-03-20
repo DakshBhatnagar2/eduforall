@@ -39,7 +39,7 @@ const successStories = [
   {
     name: "Emma Rodriguez",
     role: "Volunteer",
-    content: "Being part of TheEducationForAll has been one of the most rewarding experiences of my life. Seeing the impact on children's lives is truly inspiring.",
+    content: "Being part of TheEducationForAll has been one of the most rewarding experiences of my life. Seeing the impact on children&apos;s lives is truly inspiring.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   },
 ];
@@ -51,15 +51,15 @@ export default function Impact() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-indigo-600">Our Impact</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Making a Real Difference in Children's Lives
+            Making a Real Difference in Children Lives
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Through our programs and initiatives, we've helped thousands of children access quality education and build better futures.
+            Through our programs and initiatives, we&apos;ve helped thousands of children access quality education and build better futures.
           </p>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We&apos;re making a difference in communities around the world through our educational programs.
           </p>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Join us in our mission to transform lives through education.
           </p>
         </div>

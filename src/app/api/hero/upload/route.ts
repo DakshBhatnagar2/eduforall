@@ -9,6 +9,11 @@ interface UploadResponse {
   url?: string;
 }
 
+interface FileSystemError extends Error {
+  code?: string;
+  path?: string;
+}
+
 export async function POST(request: NextRequest): Promise<NextResponse<UploadResponse>> {
   try {
     const formData = await request.formData();
@@ -47,10 +52,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<UploadRes
       await access(publicDir);
       await writeFile(filePath, processedImageBuffer);
       console.log('File saved successfully');
-    } catch (writeError: any) {
-      console.error('Error writing file:', writeError);
+    } catch (writeError: unknown) {
+      const error = writeError as FileSystemError;
+      console.error('Error writing file:', error);
       return NextResponse.json(
-        { success: false, message: 'Error saving file', details: writeError.message },
+        { success: false, message: 'Error saving file', details: error.message },
         { status: 500 }
       );
     }
@@ -62,10 +68,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<UploadRes
       url: `/images/hero/${fileName}`
     });
 
-  } catch (error: any) {
-    console.error('Error uploading hero image:', error);
+  } catch (error: unknown) {
+    const err = error as Error;
+    console.error('Error uploading hero image:', err);
     return NextResponse.json(
-      { success: false, message: 'Error uploading image', details: error.message },
+      { success: false, message: 'Error uploading image', details: err.message },
       { status: 500 }
     );
   }
