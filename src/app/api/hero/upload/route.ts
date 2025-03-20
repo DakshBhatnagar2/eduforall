@@ -1,16 +1,22 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import { writeFile, access } from 'fs/promises';
 import { join } from 'path';
 import sharp from 'sharp';
 
-export async function POST(request: Request) {
+interface UploadResponse {
+  success: boolean;
+  message: string;
+  url?: string;
+}
+
+export async function POST(request: NextRequest): Promise<NextResponse<UploadResponse>> {
   try {
     const formData = await request.formData();
-    const file = formData.get('image') as File;
+    const file = formData.get('file') as File;
     
     if (!file) {
       return NextResponse.json(
-        { error: 'No file uploaded' },
+        { success: false, message: 'No file uploaded' },
         { status: 400 }
       );
     }
@@ -31,7 +37,8 @@ export async function POST(request: Request) {
 
     // Save the processed image, replacing the original hero.jpg
     const publicDir = join(process.cwd(), 'public', 'images', 'hero');
-    const filePath = join(publicDir, 'hero.jpg');
+    const fileName = `hero-${Date.now()}.jpg`;
+    const filePath = join(publicDir, fileName);
     
     console.log('Saving to path:', filePath);
 
@@ -43,21 +50,22 @@ export async function POST(request: Request) {
     } catch (writeError: any) {
       console.error('Error writing file:', writeError);
       return NextResponse.json(
-        { error: 'Error saving file', details: writeError.message },
+        { success: false, message: 'Error saving file', details: writeError.message },
         { status: 500 }
       );
     }
 
     // Return the image URL
-    return NextResponse.json({ 
-      imageUrl: '/images/hero/hero.jpg',
-      message: 'Hero image updated successfully' 
+    return NextResponse.json({
+      success: true,
+      message: 'Hero image updated successfully',
+      url: `/images/hero/${fileName}`
     });
 
   } catch (error: any) {
     console.error('Error uploading hero image:', error);
     return NextResponse.json(
-      { error: 'Error uploading image', details: error.message },
+      { success: false, message: 'Error uploading image', details: error.message },
       { status: 500 }
     );
   }

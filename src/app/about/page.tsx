@@ -19,19 +19,19 @@ export default function AboutUs() {
             >
               <div>
                 <h1 className="text-5xl font-bold text-gray-900 mb-8">About Us</h1>
-                <p className="text-xl text-gray-600 leading-relaxed">
+                <p className="text-xl text-gray-600">
                   We believe that every child deserves access to quality education, regardless of their circumstances. 
                   Our mission is to break down barriers to education and create opportunities for children to learn, 
                   grow, and thrive. Since our inception, we have been committed to transforming lives through education, 
                   working tirelessly to ensure that no child is left behind in their educational journey.
                 </p>
-                <p className="text-xl text-gray-600 leading-relaxed mt-8">
+                <p className="text-xl text-gray-600 mt-8">
                   Through our innovative programs and dedicated team, we work tirelessly to ensure that education 
                   becomes a powerful tool for transformation in communities around the world. Our approach combines 
                   traditional teaching methods with cutting-edge technology, creating an engaging and effective 
                   learning environment that prepares students for the challenges of tomorrow.
                 </p>
-                <p className="text-xl text-gray-600 leading-relaxed mt-8">
+                <p className="text-xl text-gray-600 mt-8">
                   We believe in the power of community and collaboration. By working closely with local leaders, 
                   educators, and families, we create sustainable educational solutions that are tailored to the 
                   unique needs of each community. Our success is measured not just in numbers, but in the lasting 
@@ -320,7 +320,7 @@ export default function AboutUs() {
               {
                 name: "Priya Patel",
                 role: "Community Outreach",
-                bio: `Priya's expertise in community engagement has helped us build strong partnerships and expand our reach. 
+                bio: `Priya&apos;s expertise in community engagement has helped us build strong partnerships and expand our reach. 
                 She has developed effective strategies for community involvement and sustainable program implementation.`,
                 image: "/images/team/priya.jpg"
               }

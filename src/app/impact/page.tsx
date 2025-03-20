@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const impactData = [
   {
     title: 'Children Reached',
@@ -54,6 +56,12 @@ export default function Impact() {
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Through our programs and initiatives, we've helped thousands of children access quality education and build better futures.
           </p>
+          <p className="text-xl text-gray-600">
+            We&apos;re making a difference in communities around the world through our educational programs.
+          </p>
+          <p className="text-xl text-gray-600">
+            Join us in our mission to transform lives through education.
+          </p>
         </div>
 
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -81,10 +89,12 @@ export default function Impact() {
             {successStories.map((story) => (
               <article key={story.name} className="flex flex-col items-start">
                 <div className="relative w-full">
-                  <img
+                  <Image
                     src={story.image}
                     alt=""
                     className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                    width={800}
+                    height={600}
                   />
                 </div>
                 <div className="max-w-xl">

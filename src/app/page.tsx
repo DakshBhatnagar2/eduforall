@@ -99,8 +99,8 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-blue-900 sm:text-4xl">
               Our Impact
             </h2>
-            <p className="mt-4 text-xl text-gray-600">
-              Together, we're making a difference in children's lives.
+            <p className="text-xl text-gray-600">
+              We&apos;re dedicated to making a difference in children&apos;s lives through education.
             </p>
           </div>
 

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application Documentation</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2, h3 {
+            color: #1a365d;
+            margin-top: 2rem;
+        }
+        code {
+            background: #f3f4f6;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.25rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        pre {
+            background: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .component {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .props-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .props-table th, .props-table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        .props-table th {
+            background: #f3f4f6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Application Documentation</h1>
+
+    <h2>Overview</h2>
+    <p>
+        This web application is built using Next.js, React, and Tailwind CSS. It features a modern, responsive design
+        with smooth animations and a focus on user experience. The application includes various sections showcasing
+        information about an educational organization.
+    </p>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li>Next.js - React framework for production</li>
+        <li>React - JavaScript library for building user interfaces</li>
+        <li>Tailwind CSS - Utility-first CSS framework</li>
+        <li>Framer Motion - Animation library</li>
+        <li>TypeScript - Typed JavaScript</li>
+    </ul>
+
+    <h2>Project Structure</h2>
+    <pre>
+src/
+├── app/
+│   ├── about/
+│   │   └── page.tsx
+│   └── layout.tsx
+├── components/
+│   └── ui/
+│       ├── button.tsx
+│       └── card.tsx
+└── styles/
+    └── globals.css
+    </pre>
+
+    <h2>Components</h2>
+
+    <div class="component">
+        <h3>AboutUs Page Component</h3>
+        <p>
+            The main page component that displays information about the organization. It includes several sections:
+        </p>
+        <ul>
+            <li>Mission Section</li>
+            <li>History Section</li>
+            <li>Stats Section</li>
+            <li>Impact Section</li>
+            <li>Programs Section</li>
+            <li>Team Section</li>
+            <li>Call to Action Section</li>
+        </ul>
+    </div>
+
+    <h2>Styling</h2>
+    <p>
+        The application uses Tailwind CSS for styling with a consistent color scheme and typography:
+    </p>
+    <ul>
+        <li>Primary Color: Blue (#2563eb)</li>
+        <li>Text Colors:
+            <ul>
+                <li>Headings: Gray-900 (#111827)</li>
+                <li>Body Text: Gray-600 (#4B5563)</li>
+                <li>Accent Text: Blue-600 (#2563eb)</li>
+            </ul>
+        </li>
+        <li>Background Colors:
+            <ul>
+                <li>Primary: White (#ffffff)</li>
+                <li>Secondary: Gray-50 (#F9FAFB)</li>
+                <li>Accent: Blue-600 (#2563eb)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Animations</h2>
+    <p>
+        The application uses Framer Motion for smooth animations:
+    </p>
+    <ul>
+        <li>Fade-in animations on scroll</li>
+        <li>Slide-in animations for content sections</li>
+        <li>Hover effects on interactive elements</li>
+        <li>Staggered animations for lists and grids</li>
+    </ul>
+
+    <h2>Responsive Design</h2>
+    <p>
+        The application is fully responsive with breakpoints for different screen sizes:
+    </p>
+    <ul>
+        <li>Mobile: < 768px</li>
+        <li>Tablet: 768px - 1024px</li>
+        <li>Desktop: > 1024px</li>
+    </ul>
+
+    <h2>Image Requirements</h2>
+    <p>
+        The application requires the following images:
+    </p>
+    <ul>
+        <li>/images/about/mission.jpg - Hero image of children learning</li>
+        <li>/images/programs/primary.jpg - Primary education program image</li>
+        <li>/images/programs/community.jpg - Community learning center image</li>
+        <li>/images/team/sarah.jpg - Team member photo</li>
+        <li>/images/team/michael.jpg - Team member photo</li>
+        <li>/images/team/priya.jpg - Team member photo</li>
+    </ul>
+
+    <h2>Usage</h2>
+    <p>
+        To use this application:
+    </p>
+    <ol>
+        <li>Ensure all required images are placed in the correct directories</li>
+        <li>Install dependencies using <code>npm install</code></li>
+        <li>Run the development server using <code>npm run dev</code></li>
+        <li>Build for production using <code>npm run build</code></li>
+    </ol>
+
+    <h2>Performance Considerations</h2>
+    <ul>
+        <li>Images are optimized using Next.js Image component</li>
+        <li>Animations are triggered only once per section</li>
+        <li>Responsive images are loaded based on device size</li>
+        <li>Lazy loading is implemented for images below the fold</li>
+    </ul>
+
+    <h2>Browser Support</h2>
+    <p>
+        The application supports all modern browsers:
+    </p>
+    <ul>
+        <li>Chrome (latest)</li>
+        <li>Firefox (latest)</li>
+        <li>Safari (latest)</li>
+        <li>Edge (latest)</li>
+    </ul>
+
+    <h2>Accessibility</h2>
+    <p>
+        The application follows accessibility best practices:
+    </p>
+    <ul>
+        <li>Semantic HTML structure</li>
+        <li>Proper heading hierarchy</li>
+        <li>Alt text for images</li>
+        <li>Sufficient color contrast</li>
+        <li>Keyboard navigation support</li>
+    </ul>
+</body>
+</html> 
